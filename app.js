@@ -2,23 +2,20 @@ var btnPrimary = document.querySelector("#btn-primary");
 var billAmount = document.querySelector("#bill-amount");
 var cashGiven = document.querySelector("#cash-given");
 var message = document.querySelector("#error-message");
-
+var noOfNotes = document.querySelectorAll(".no-of-notes");
 var availableNotes = ["2000", "500", "200", "100", "50", "20", "10", "1"];
 
 btnPrimary.addEventListener("click", function validateBillAmount() {
-  message.style.display = "none";
-
-  if (billAmount.value > 0) {
-    if (cashGiven.value > billAmount.value) {
+  if (billAmount.value >= 0) {
+    if (cashGiven.value >= billAmount.value) {
       hideMessage();
-      console.log("ok");
+      var amountToBeReturned = cashGiven.value - billAmount.value;
+      calculateChange(amountToBeReturned);
     } else {
-      showMessage();
-      message.innerText = "Do you want to wash dishes ?";
+      showMessage("Do you want to wash dishes ?");
     }
   } else {
-    showMessage();
-    message.innerText = "Invalid Bill Amount";
+    showMessage("Invalid Bill Amount");
   }
 });
 
@@ -27,4 +24,12 @@ function hideMessage(msg) {
 }
 function showMessage(msg) {
   message.style.display = "block";
+  message.innerText = msg;
+}
+function calculateChange(amountToBeReturned) {
+  for (let i = 0; i < availableNotes.length; i++) {
+    var numberOfNotes = Math.trunc(amountToBeReturned / availableNotes[i]);
+    amountToBeReturned %= availableNotes[i];
+    noOfNotes[i].innerText = numberOfNotes;
+  }
 }

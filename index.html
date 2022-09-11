@@ -5,48 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cash Register</title>
+    <link href="styles.css" rel="stylesheet" />
   </head>
   <body>
-    <h1>Cash Register</h1>
-    <h3>
-      Enter the bill amount and cash given by the customer and know minimum
-      number of notes to return.
-    </h3>
-    <label for="bill-amount">Bill amount: </label>
-    <input id="bill-amount" type="text" />
+    <div class="container">
+      <h1>Cash Register</h1>
+      <h3>
+        Enter the bill amount and cash given by the customer and know minimum
+        number of notes to return.
+      </h3>
+      <label for="bill-amount">Bill amount: </label>
+      <input id="bill-amount" type="text" />
 
-    <label for="cash-given">Cash Given: </label>
-    <input id="cash-given" type="text" />
-    <button id="btn-primary">Check</button>
-    <p id="error-message">Message</p>
-    <table>
-      <caption>
-        Return Change
-      </caption>
-      <tr>
-        <th>No of Notes</th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
+      <label for="cash-given">Cash Given: </label>
+      <input id="cash-given" type="text" />
+      <button id="btn-primary">Check</button>
+      <p id="error-message"></p>
+      <table>
+        <caption>
+          Return Change
+        </caption>
+        <tr>
+          <th>No of Notes</th>
+          <td class="no-of-notes"></td>
+          <td class="no-of-notes"></td>
+          <td class="no-of-notes"></td>
+          <td class="no-of-notes"></td>
+          <td class="no-of-notes"></td>
+          <td class="no-of-notes"></td>
+          <td class="no-of-notes"></td>
+          <td class="no-of-notes"></td>
+        </tr>
 
-      <tr>
-        <th>Note</th>
-        <td>2000</td>
-        <td>500</td>
-        <td>200</td>
-        <td>100</td>
-        <td>50</td>
-        <td>20</td>
-        <td>10</td>
-        <td>1</td>
-      </tr>
-    </table>
+        <tr>
+          <th>Note</th>
+          <td>2000</td>
+          <td>500</td>
+          <td>200</td>
+          <td>100</td>
+          <td>50</td>
+          <td>20</td>
+          <td>10</td>
+          <td>1</td>
+        </tr>
+      </table>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
