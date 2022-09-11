@@ -1,7 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
 :root {
-  --primary-color: #a7f3d0;
+  --primary-color: #bae6fd;
+  --darker-blue: #0c4a6e;
+  --medium-blue: #0284c7;
 }
 
+body {
+  font-family: "Montserrat", sans-serif;
+}
 .container {
   display: block;
   margin: auto;
@@ -11,29 +18,60 @@
 body {
   background-color: var(--primary-color);
 }
+
+h1 {
+  color: #041a27;
+  margin: 3rem;
+}
+p {
+  color: var(--medium-blue);
+  font-weight: bold;
+}
 input {
-  width: 100%;
+  width: 95%;
   margin: 0.5rem;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--darker-blue);
+  color: var(--darker-blue);
+  font-weight: bold;
+  font-size: medium;
 }
 
 #btn-primary {
-  margin: 1.5rem;
-  background-color: #047857;
-  border: 1px solid black;
-  padding: 0.5rem 2rem;
+  background-color: var(--darker-blue);
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  padding: 0.7rem 2rem;
   display: block;
   margin: auto;
+  font-size: medium;
+  color: white;
+  margin-bottom: 3rem;
 }
-
+label {
+  font-weight: bold;
+  font-size: large;
+  color: var(--darker-blue);
+}
 td,
-th,
-caption {
+th {
   padding: 1rem;
   font-weight: bold;
-  border: 2px solid black;
+  border: 0.5px solid var(--darker-blue);
+  color: var(--darker-blue);
+}
+caption {
+  font-size: x-large;
+  font-weight: bold;
+  color: var(--medium-blue);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 table {
   margin: auto;
   margin-top: 1rem;
+  border: 1px solid var(--darker-blue);
 }
