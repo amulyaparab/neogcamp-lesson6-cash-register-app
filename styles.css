@@ -8,11 +8,12 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  margin: 0px;
 }
 .container {
   display: block;
   margin: auto;
-  width: 50vw;
+  width: 60vw;
   text-align: center;
 }
 body {
@@ -20,10 +21,15 @@ body {
 }
 
 h1 {
-  color: #041a27;
-  margin: 3rem;
+  text-align: center;
+  padding: 3rem 4rem;
+  background-color: var(--darker-blue);
+  color: white;
+  /* color: #041a27; */
+  margin-top: 0px;
 }
 p {
+  margin-top: 4rem;
   color: var(--medium-blue);
   font-weight: bold;
 }
@@ -74,4 +80,35 @@ table {
   margin: auto;
   margin-top: 1rem;
   border: 1px solid var(--darker-blue);
+}
+
+.footer {
+  background-color: var(--darker-blue);
+  text-align: center;
+  margin-top: 22rem;
+  padding: 3rem;
+  border-radius: 0.5rem;
+}
+
+.footer-heading {
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding-bottom: 1rem;
+  color: white;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  display: inline;
+  font-weight: bold;
+}
+
+.footer ul {
+  padding-inline-start: 0px;
+}
+
+.list-item-inline {
+  display: inline;
+  padding: 1rem;
 }
