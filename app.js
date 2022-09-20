@@ -11,7 +11,7 @@ btnPrimary.addEventListener("click", () => {
   var newCashGiven = Number(cashGiven.value);
   hideMessage();
   if (newBillAmount > 0) {
-    if (newCashGiven >= newBillAmount) {
+    if (newCashGiven > newBillAmount) {
       showTable(table);
       var amountToBeReturned = newCashGiven - newBillAmount;
       calculateChange(amountToBeReturned);
@@ -27,6 +27,9 @@ btnPrimary.addEventListener("click", () => {
       hideMessage();
       hideTable(table);
       showMessage(" I need Actual Cash Man😒");
+    } else if (newCashGiven === newBillAmount) {
+      hideTable(table);
+      showMessage("Thanks! Come back again😊");
     } else {
       hideMessage();
       hideTable(table);
