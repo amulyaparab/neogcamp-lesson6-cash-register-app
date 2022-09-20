@@ -45,7 +45,7 @@ function hideTable(table) {
   table.style.display = "none";
 }
 function showTable(table) {
-  table.style.display = "block";
+  table.style.display = "flex";
 }
 function showMessage(msg) {
   message.style.display = "block";

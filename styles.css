@@ -55,6 +55,7 @@ input {
   font-size: medium;
   color: white;
   margin-bottom: 3rem;
+  cursor: pointer;
 }
 label {
   font-weight: bold;
@@ -65,8 +66,9 @@ td,
 th {
   padding: 1rem;
   font-weight: bold;
-  border: 0.5px solid var(--darker-blue);
+  border: 2px solid var(--darker-blue);
   color: var(--darker-blue);
+  width: 10%;
 }
 caption {
   font-size: x-large;
@@ -77,9 +79,12 @@ caption {
 }
 
 table {
+  display: flex;
+  flex-direction: column;
   margin: auto;
   margin-top: 1rem;
-  border: 1px solid var(--darker-blue);
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .footer {
